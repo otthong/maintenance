@@ -16,7 +16,7 @@ sap.ui.define([
             var oArguments = oEvent.getParameter("arguments");
             console.log("路由参数:", oArguments);
             
-            if (!oArguments || !oArguments.id) {
+            if (!oArguments || !oArguments.objectId) {
                 console.error("未收到有效的路由参数");
                 MessageBox.error("无效的记录ID", {
                     onClose: function() {
@@ -26,7 +26,7 @@ sap.ui.define([
                 return;
             }
 
-            this._recordId = oArguments.id;
+            this._recordId = oArguments.objectId;
             console.log("获取到记录ID:", this._recordId);
             
             // 编辑模式 - 从后端加载数据

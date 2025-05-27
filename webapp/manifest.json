@@ -76,9 +76,14 @@
           "target": "list"
         },
         {
-          "pattern": "detail/{id}",
+          "pattern": "detail/{objectId}",
           "name": "detail",
           "target": "detail"
+        },
+        {
+          "pattern": "information/{objectId}",
+          "name": "information",
+          "target": "information"
         }
       ],
       "targets": {
@@ -89,6 +94,10 @@
         "detail": {
           "viewId": "detail",
           "viewName": "Detail"
+        },
+        "information": {
+          "viewId": "information",
+          "viewName": "Information"
         }
       }
     }

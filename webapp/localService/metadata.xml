@@ -17,10 +17,16 @@
                 <Property Name="AbnormalSmell" Type="Edm.Boolean" />
                 <Property Name="Remarks" Type="Edm.String" />
                 <Property Name="Inspector" Type="Edm.String" />
+                <Property Name="FunctionalLocation" Type="Edm.String" />
+                <Property Name="FunctionalLocationDesc" Type="Edm.String" />
+                <Property Name="Equipment" Type="Edm.String" />
+                <Property Name="OldEquipmentNumber" Type="Edm.String" />
+                <Property Name="EquipmentDesc" Type="Edm.String" />
+                <Property Name="BusinessType" Type="Edm.String" />
             </EntityType>
             <EntityContainer Name="MaintenanceService" m:IsDefaultEntityContainer="true">
                 <EntitySet Name="MaintenanceChecks" EntityType="MaintenanceService.MaintenanceCheck" />
             </EntityContainer>
         </Schema>
     </edmx:DataServices>
-</edmx:Edmx> 
+</edmx:Edmx>

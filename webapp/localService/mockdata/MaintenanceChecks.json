@@ -12,7 +12,13 @@
                 "CapacitorStatus": true,
                 "AbnormalSmell": false,
                 "Remarks": "例行检查完成，设备运行正常",
-                "Inspector": "张工"
+                "Inspector": "张工",
+                "FunctionalLocation": "一车间变电所",
+                "FunctionalLocationDesc": "一车间变电所主配电室",
+                "Equipment": "变压器",
+                "OldEquipmentNumber": "EQ-2023-001",
+                "EquipmentDesc": "500KVA干式变压器",
+                "BusinessType": "日常巡检"
             },
             {
                 "ID": "CHECK002",
@@ -25,7 +31,13 @@
                 "CapacitorStatus": true,
                 "AbnormalSmell": false,
                 "Remarks": "充电模组监控显示异常，需要进一步检查",
-                "Inspector": "李工"
+                "Inspector": "李工",
+                "FunctionalLocation": "二车间配电室",
+                "FunctionalLocationDesc": "二车间配电室主控室",
+                "Equipment": "配电柜",
+                "OldEquipmentNumber": "EQ-2023-002",
+                "EquipmentDesc": "低压配电柜",
+                "BusinessType": "故障维修"
             },
             {
                 "ID": "CHECK003",
@@ -38,7 +50,13 @@
                 "CapacitorStatus": true,
                 "AbnormalSmell": false,
                 "Remarks": "屋面有轻微渗水，已安排维修",
-                "Inspector": "王工"
+                "Inspector": "王工",
+                "FunctionalLocation": "三车间配电室",
+                "FunctionalLocationDesc": "三车间配电室控制室",
+                "Equipment": "UPS",
+                "OldEquipmentNumber": "EQ-2023-003",
+                "EquipmentDesc": "不间断电源系统",
+                "BusinessType": "预防性维护"
             }
         ]
     }

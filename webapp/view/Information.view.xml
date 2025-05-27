@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View
+    controllerName="com.demo.maintenanceapp.controller.Information"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page
+        title="设备信息"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+            <FlexBox
+                width="100%"
+                height="100%"
+                alignItems="Center"
+                justifyContent="Center">
+                <VBox width="50%" class="sapUiContentPadding blueBox sapUiMediumMarginTopBottom">
+                    <items>
+                        <HBox width="100%" justifyContent="Center">
+                            <Title text="设备详细信息" class="titleText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="功能位置" class="largeText labelText" />
+                            <Text text="{FunctionalLocation}" class="largeText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="功能位置描述" class="largeText labelText" />
+                            <Text text="{FunctionalLocationDesc}" class="largeText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="设备" class="largeText labelText" />
+                            <Text text="{Equipment}" class="largeText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="旧设备号码" class="largeText labelText" />
+                            <Text text="{OldEquipmentNumber}" class="largeText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="设备描述" class="largeText labelText" />
+                            <Text text="{EquipmentDesc}" class="largeText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="执行业务类型" class="largeText labelText" />
+                            <Text text="{BusinessType}" class="largeText" />
+                        </HBox>
+
+                        <HBox width="100%" justifyContent="Center" class="sapUiTinyMarginTop">
+                            <Button text="日常运维" press=".onDailyMaintenance" class="lightBlueButton sapUiSmallMarginEnd"/>
+                            <Button text="预防性维修" press=".onPreventiveMaintenance" class="lightBlueButton sapUiSmallMarginEnd"/>
+                            <Button text="设备维修" press=".onEquipmentMaintenance" class="lightBlueButton"/>
+                        </HBox>
+                    </items>
+                </VBox>
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View> 
