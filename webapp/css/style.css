@@ -1,0 +1,35 @@
+.blueBox {
+    border: 1px solid #0854a0;
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.largeText {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.titleText {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333333;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.labelText {
+    margin-right: 1rem;
+}
+
+.lightBlueTextArea textarea {
+    background-color: #f0f7ff !important;
+} 

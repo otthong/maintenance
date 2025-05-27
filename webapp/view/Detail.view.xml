@@ -1,0 +1,84 @@
+<mvc:View
+    controllerName="com.demo.maintenanceapp.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page
+        title="设备检查"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+            <FlexBox
+                width="100%"
+                height="100%"
+                alignItems="Center"
+                justifyContent="Center">
+                <VBox width="50%" class="sapUiContentPadding blueBox sapUiMediumMarginTopBottom">
+                    <items>
+                        <HBox width="100%" justifyContent="Center">
+                            <Title text="一车间变电所相关设备" class="titleText" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="直流屏蓄电池及接线是否正常" required="true" class="largeText labelText" />
+                            <CheckBox id="batteryStatus" selected="{BatteryStatus}" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="充电模组监控是否正常" required="true" class="largeText labelText" />
+                            <CheckBox id="chargerMonitor" selected="{ChargerMonitor}" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="屋面、育户是否完好" required="true" class="largeText labelText" />
+                            <CheckBox id="roofCondition" selected="{RoofCondition}" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="变压器声音是否正常" required="true" class="largeText labelText" />
+                            <CheckBox id="transformerSound" selected="{TransformerSound}" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="高压柜仪表显示是否正常" required="true" class="largeText labelText" />
+                            <CheckBox id="hvGaugeMeter" selected="{HvGaugeMeter}" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="电容柜仪表、风扇显示是否正常" required="true" class="largeText labelText" />
+                            <CheckBox id="capacitorStatus" selected="{CapacitorStatus}" />
+                        </HBox>
+                        
+                        <HBox alignItems="Center" justifyContent="Center" class="checkboxContainer">
+                            <Label text="室内是否有异味" required="true" class="largeText labelText" />
+                            <CheckBox id="abnormalSmell" selected="{AbnormalSmell}" />
+                        </HBox>
+
+                        <Label text="   " class="largeText sapUiTinyMarginBottom" />
+                        <TextArea 
+                            id="remarks"
+                            value="{Remarks}" 
+                            rows="4" 
+                            width="100%" 
+                            class="sapUiSmallMarginBottom lightBlueTextArea"
+                            placeholder="日常巡检文本记录" />
+                    </items>
+                </VBox>
+            </FlexBox>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button
+                    text="保存"
+                    type="Emphasized"
+                    press=".onSave"/>
+                <Button
+                    text="取消"
+                    press=".onCancel"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View> 

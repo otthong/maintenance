@@ -1,0 +1,63 @@
+<mvc:View
+    controllerName="com.demo.maintenanceapp.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page
+        title="设备检查记录"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+            <SearchField
+                id="searchField"
+                search=".onSearch"
+                width="100%"
+                placeholder="请输入ID进行搜索"/>
+            <List
+                id="list"
+                items="{
+                    path: '/MaintenanceChecks',
+                    sorter: {
+                        path: 'Date',
+                        descending: true
+                    }
+                }"
+                noDataText="没有检查记录">
+                <items>
+                    <ObjectListItem
+                        title="{
+                            path: 'Date',
+                            formatter: '.formatter.formatDate'
+                        }"
+                        type="Navigation"
+                        press=".onItemPress"
+                        number="{ID}">
+                        <firstStatus>
+                            <ObjectStatus
+                                text="{Inspector}"
+                                state="None"/>
+                        </firstStatus>
+                        <attributes>
+                            <ObjectAttribute
+                                title="充电模组监控"
+                                text="{
+                                    path: 'ChargerMonitor',
+                                    formatter: '.formatter.formatStatus'
+                                }"/>
+                            <ObjectAttribute
+                                title="屋面状态"
+                                text="{
+                                    path: 'RoofCondition',
+                                    formatter: '.formatter.formatStatus'
+                                }"/>
+                        </attributes>
+                        <markers>
+                            <ObjectMarker
+                                type="Unsaved"
+                                visible="{= !${BatteryStatus} || !${ChargerMonitor} || !${RoofCondition} || !${TransformerSound} || !${HvGaugeMeter} || !${CapacitorStatus} || ${AbnormalSmell}}"/>
+                        </markers>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View> 

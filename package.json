@@ -1,0 +1,14 @@
+{
+  "name": "maintenanceapp",
+  "version": "1.0.0",
+  "description": "设备维护检查应用",
+  "private": true,
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "devDependencies": {
+    "@sap/ux-ui5-tooling": "^1.0.0",
+    "@ui5/cli": "^3.11.6"
+  }
+}

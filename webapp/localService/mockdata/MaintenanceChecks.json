@@ -1,0 +1,45 @@
+{
+    "d": {
+        "results": [
+            {
+                "ID": "CHECK001",
+                "Date": "/Date(1683849600000)/",
+                "BatteryStatus": true,
+                "ChargerMonitor": true,
+                "RoofCondition": true,
+                "TransformerSound": true,
+                "HvGaugeMeter": true,
+                "CapacitorStatus": true,
+                "AbnormalSmell": false,
+                "Remarks": "例行检查完成，设备运行正常",
+                "Inspector": "张工"
+            },
+            {
+                "ID": "CHECK002",
+                "Date": "/Date(1683936000000)/",
+                "BatteryStatus": true,
+                "ChargerMonitor": false,
+                "RoofCondition": true,
+                "TransformerSound": true,
+                "HvGaugeMeter": true,
+                "CapacitorStatus": true,
+                "AbnormalSmell": false,
+                "Remarks": "充电模组监控显示异常，需要进一步检查",
+                "Inspector": "李工"
+            },
+            {
+                "ID": "CHECK003",
+                "Date": "/Date(1684022400000)/",
+                "BatteryStatus": true,
+                "ChargerMonitor": true,
+                "RoofCondition": false,
+                "TransformerSound": true,
+                "HvGaugeMeter": true,
+                "CapacitorStatus": true,
+                "AbnormalSmell": false,
+                "Remarks": "屋面有轻微渗水，已安排维修",
+                "Inspector": "王工"
+            }
+        ]
+    }
+} 
