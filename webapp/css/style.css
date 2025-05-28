@@ -42,4 +42,46 @@
 
 .lightBlueButton:hover {
     background-color: #cce5ff !important;
+}
+
+/* Layout styles for iPhone 14 Pro Max */
+.sapUiLayoutGrid {
+    padding: 0.5rem;
+}
+
+.sapUiLayoutGrid .sapUiLayoutGridCell {
+    padding: 0.5rem;
+}
+
+.sapUiLayoutGrid .sapMText {
+    padding-left: 0.5rem;
+}
+
+.sapUiLayoutGrid .sapMLabel {
+    padding-right: 0.5rem;
+}
+
+/* New layout styles */
+.sapMVBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.sapMVBox .sapMLabel {
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+}
+
+.sapMVBox .sapMText {
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
 } 

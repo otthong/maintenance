@@ -13,9 +13,9 @@
             <FlexBox
                 width="100%"
                 height="100%"
-                alignItems="Center"
-                justifyContent="Center">
-                <VBox width="50%" class="sapUiContentPadding blueBox sapUiMediumMarginTopBottom">
+                alignItems="Start"
+                justifyContent="Start">
+                <VBox width="100%" class="sapUiContentPadding sapUiMediumMarginTopBottom">
                     <items>
                         <HBox width="100%" justifyContent="Center">
                             <Title text="一车间变电所相关设备" class="titleText" />
