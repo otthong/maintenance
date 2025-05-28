@@ -6,6 +6,7 @@
     xmlns:layout="sap.ui.layout"
     xmlns:core="sap.ui.core"
     xmlns:grid="sap.ui.layout"
+    xmlns:ndc="sap.ndc"
     xmlns="sap.m">
     <Page
         title="设备信息"
@@ -25,12 +26,12 @@
                         
                         <HBox width="100%" class="sapUiSmallMarginTop">
                             <VBox width="40%" class="sapUiSmallMarginEnd">
-                                <Label text="功能位置" class="largeText labelText" textAlign="Right" width="100%" />
-                                <Label text="功能位置描述" class="largeText labelText" textAlign="Right" width="100%" />
-                                <Label text="设备" class="largeText labelText" textAlign="Right" width="100%" />
-                                <Label text="旧设备号码" class="largeText labelText" textAlign="Right" width="100%" />
-                                <Label text="设备描述" class="largeText labelText" textAlign="Right" width="100%" />
-                                <Label text="执行业务类型" class="largeText labelText" textAlign="Right" width="100%" />
+                                <Label text="功能位置:" class="largeText labelText" textAlign="Right" width="100%" />
+                                <Label text="功能位置描述:" class="largeText labelText" textAlign="Right" width="100%" />
+                                <Label text="设备:" class="largeText labelText" textAlign="Right" width="100%" />
+                                <Label text="旧设备号码:" class="largeText labelText" textAlign="Right" width="100%" />
+                                <Label text="设备描述:" class="largeText labelText" textAlign="Right" width="100%" />
+                                <Label text="执行业务类型:" class="largeText labelText" textAlign="Right" width="100%" />
                             </VBox>
                             <VBox width="60%">
                                 <Text text="{FunctionalLocation}" class="largeText" wrapping="false" width="100%" />
@@ -46,6 +47,14 @@
                             <Button text="日常运维" press=".onDailyMaintenance" class="lightBlueButton sapUiSmallMarginEnd"/>
                             <Button text="预防性维修" press=".onPreventiveMaintenance" class="lightBlueButton sapUiSmallMarginEnd"/>
                             <Button text="设备维修" press=".onEquipmentMaintenance" class="lightBlueButton"/>
+                        </HBox>
+
+                        <HBox width="100%" justifyContent="Center" class="sapUiMediumMarginTop">
+                            <ndc:BarcodeScannerButton
+                                scanSuccess=".onScanSuccess"
+                                scanError=".onScanError"
+                                dialogTitle="扫描设备条码"
+                                class="sapUiSmallMarginEnd"/>
                         </HBox>
                     </items>
                 </VBox>

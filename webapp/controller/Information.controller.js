@@ -75,6 +75,33 @@ sap.ui.define([
 
         onEquipmentMaintenance: function () {
             MessageToast.show("设备维修功能开发中");
+        },
+
+        onScanSuccess: function(oEvent) {
+            var sBarcode = oEvent.getParameter("text");
+            MessageToast.show("扫描成功: " + sBarcode);
+            
+            // 这里可以添加扫描后的业务逻辑
+            // 例如：根据扫描到的条码查询设备信息
+            var oModel = this.getView().getModel();
+            var sPath = "/MaintenanceChecks('" + sBarcode + "')";
+            
+            oModel.read(sPath, {
+                success: function(oData) {
+                    this.getView().bindElement({
+                        path: sPath
+                    });
+                    MessageToast.show("设备信息已更新");
+                }.bind(this),
+                error: function(oError) {
+                    MessageToast.show("未找到相关设备信息");
+                }
+            });
+        },
+
+        onScanError: function(oEvent) {
+            var sError = oEvent.getParameter("message");
+            MessageToast.show("扫描失败: " + sError);
         }
     });
 }); 
